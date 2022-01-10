@@ -92,12 +92,12 @@ let subaruKill=function(){
 						let kekka=((jikan-jikan2)/60000);
 						if(kekka<=15){
 							for(let i=0;i===1;i++){
-								url1=window.open("https://togo.tmz.itmac.jp/redmine/issues/"+sssKill.document.getElementsByClassName("id")[num[i]].innerText);
-								url1.addEventListener('DOMContentLoaded', function(){
-									url1.document.getElementById("issue_subject").value=url1.document.getElementById("issue_subject").value.split(' :',1)[0];
-									url1.document.getElementById("issue_parent_issue_id").value=oyaTike;
-									url1.document.getElementById("issue_status_id").value="12";
-									url1.document.getElementsByName("commit")[1].click();
+								url[i]=window.open("https://togo.tmz.itmac.jp/redmine/issues/"+sssKill.document.getElementsByClassName("id")[num[i]].innerText);
+								url[i].addEventListener('DOMContentLoaded', function(){
+									url[i].document.getElementById("issue_subject").value=url[i].document.getElementById("issue_subject").value.split(' :',1)[0];
+									url[i].document.getElementById("issue_parent_issue_id").value=oyaTike;
+									url[i].document.getElementById("issue_status_id").value="12";
+									url[i].document.getElementsByName("commit")[1].click();
 								});
 							};
 							console.log(hostName+"　を　"+oyaTikeTitle+"　に入れました");
@@ -105,8 +105,8 @@ let subaruKill=function(){
 							console.log("起動後、発生/復旧ペアの子チケ化は　"+ruikei+"件　です。");
 							sssKill.close();
 							setTimeout(function(){
-								url1.close();
-								url2.close();
+								url[0].close();
+								url[1].close();
 							},5000);
 						}else{
 							console.log('15分以上経過しています');
