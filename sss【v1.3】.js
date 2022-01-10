@@ -28,9 +28,21 @@ let subaruKill=function(){
 
 		alert("まとめーるのお時間なので動作を停止しました。\n\n親チケットの番号："+oyaTike+"\n\n題名："+oyaTikeTitle+"\n\n起動後、発生/復旧ペアの子チケ化は　"+ruikei+"件　でした。");
 
-		sssKill.close();
-		url1.close();
-		url2.close();
+		if(sssKill.closed==false){
+			sssKill.close();
+		}else{
+		};
+
+		if(url1.closed==false){
+			url1.close();
+		}else{
+		};
+
+		if(url2.closed==false){
+			url2.close();
+		}else{
+		};
+
 		document.location.reload();
 
 	}else{
