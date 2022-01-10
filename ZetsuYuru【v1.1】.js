@@ -49,7 +49,7 @@ let urlOpen = function(){
 					Gchild.document.getElementById("issue_status_id").value=13;
 					Gchild.document.getElementsByName("commit")[0].click();
 					console.log(a+'件のアラームを完了にしました。');
-					ruikei+=a;
+					ruikei+=Number(a);
 					console.log('起動してからの完了件数：　'+ruikei+'件　です。');
 					setTimeout(GchildClose,7500);
 				})
