@@ -137,13 +137,13 @@ let subaruKill=function(){
 						}
 					}
 				}else{
-					console.log('←　×　10秒の間、アラーム検知は１件です。');
+					console.log('←　×　3分の間、アラーム検知は１件です。');
 					sssKill.close();
 				}
 				sssKill.close();
 			}else{
 			//アラームが存在しない場合の処理
-				console.log('←　×　10秒の間、アラーム検知なし');
+				console.log('←　×　3分の間、アラーム検知なし');
 				sssKill.close();
 			}
 		});
@@ -151,4 +151,4 @@ let subaruKill=function(){
 };
 
 setTimeout(subaruKill,3000);
-setInterval(subaruKill,60000);
+setInterval(subaruKill,180000);
